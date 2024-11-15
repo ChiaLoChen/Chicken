@@ -957,10 +957,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chicken: {fileID: 3707154260228059171, guid: 32b3e62b20db2034cb05a11dc73799b2, type: 3}
+  evilChicken: {fileID: 7997347156059595964, guid: 5efc5cab6ce2f5d42a44b9980ef5b4f7, type: 3}
   locations:
   - {fileID: 1472499838}
   - {fileID: 1817854405}
-  numberOfChicken: {fileID: 1757323998}
 --- !u!1 &1817854405
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +973,7 @@ GameObject:
   - component: {fileID: 1817854408}
   - component: {fileID: 1817854407}
   - component: {fileID: 1817854406}
+  - component: {fileID: 1817854410}
   m_Layer: 0
   m_Name: chicken house
   m_TagString: locations
@@ -1058,6 +1059,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1817854410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817854405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad515bd12f037b43bda8c2d8ca5d373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1033682660}
+  chickenText: {fileID: 1757323998}
 --- !u!1 &2062083129
 GameObject:
   m_ObjectHideFlags: 0

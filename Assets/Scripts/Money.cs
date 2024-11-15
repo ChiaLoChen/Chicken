@@ -6,10 +6,11 @@ using TMPro;
 public class Money : MonoBehaviour
 {
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI chickenText;
     private float money = 0;
     private float time = 0f;
+    private int chicken = 0;
 
-    public GameObject spawn;
 
     void Update()
     {
@@ -18,8 +19,13 @@ public class Money : MonoBehaviour
         {
             Debug.Log("time");
             time = 0f;
-            money += 0.25f * spawn.GetComponent<ChickenSpawn>().GetNumberOfChickens();
+            money += 0.25f * chicken;
         }
         moneyText.text = "Money: " + money.ToString();
+        chickenText.text = "Chickens: " + chicken.ToString();
+    }
+    public void AddChicken()
+    {
+        chicken++;
     }
 }

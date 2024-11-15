@@ -38,6 +38,7 @@ public class Chicken : MonoBehaviour
         if (collider.gameObject.name == "chicken house")
         {
             Debug.Log("chicken arrived");
+            collider.GetComponent<Money>().AddChicken();
             Destroy(this.gameObject);
         }
     }
