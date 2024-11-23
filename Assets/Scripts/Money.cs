@@ -10,6 +10,7 @@ public class Money : MonoBehaviour
     private float money = 0;
     private float time = 0f;
     private int chicken = 0;
+    private bool dirtyFlag = false;
 
 
     void Update()
@@ -17,12 +18,17 @@ public class Money : MonoBehaviour
         time += Time.deltaTime;
         if(time>=1f)
         {
-            Debug.Log("time");
             time = 0f;
             money += 0.25f * chicken;
+            dirtyFlag = true;
         }
-        moneyText.text = "Money: " + money.ToString();
-        chickenText.text = "Chickens: " + chicken.ToString();
+
+        if (dirtyFlag)
+        {
+            moneyText.text = "Money: " + money.ToString();
+            chickenText.text = "Chickens: " + chicken.ToString();
+            dirtyFlag = false;
+        }
     }
     public void AddChicken()
     {
