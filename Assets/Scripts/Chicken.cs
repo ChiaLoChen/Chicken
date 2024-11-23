@@ -8,13 +8,6 @@ public class Chicken : MonoBehaviour
     public float speed;
 
     private int currentLocation = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {

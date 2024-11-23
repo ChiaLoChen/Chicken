@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 671139950272403432}
   - component: {fileID: 559888523016225338}
   - component: {fileID: 4258553156055161620}
-  - component: {fileID: -7378685944425114265}
   - component: {fileID: 5804352655502043604}
+  - component: {fileID: 6496937440658298661}
   m_Layer: 0
   m_Name: evilChicken
-  m_TagString: Untagged
+  m_TagString: evilChicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,20 +99,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7378685944425114265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7997347156059595964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6cc1a5daa231441b45ecd4c50c33f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locations: []
-  speed: 100
 --- !u!54 &5804352655502043604
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,3 +115,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6496937440658298661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997347156059595964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea218d8af739b140893ca924d9aae0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 70

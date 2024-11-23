@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ChickenSpawn : MonoBehaviour
+public class ChickenSpawn : Singleton<ChickenSpawn>
 {
     public GameObject chicken;
     public GameObject evilChicken;
     public GameObject[] locations;
-    void Update()
+
+    void Start()
     {
-        if (Input.anyKeyDown)
+        locations = GameObject.FindGameObjectsWithTag("locations");
+    }
+
+    public void SpawnChicken()
+    {
+        Spawn chicks = new ChickenSummon();
+        if (Random.value > 0.9)
         {
-            Spawn chicks = new ChickenSummon();
-            if (Random.value > 0.5)
-            {
-                chicks.Create(this.transform.position, evilChicken, locations);
-            }
-            else
-            {
-                chicks.Create(this.transform.position, chicken, locations);
-            }
+            chicks.Create(this.transform.position, evilChicken, locations);
+        }
+        else
+        {
+            chicks.Create(this.transform.position, chicken, locations);
         }
     }
 }
